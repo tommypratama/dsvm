@@ -4,8 +4,7 @@ python:
 sudo: required
 services:
     - docker
-install:
-    - make test-env
-script:
-    - make build
-    - make test
+before_install:
+  - docker pull tommypratama/dsvm
+  - docker run -d -p 8888:8888 tommypratama/dsvm
+  - docker ps -a
