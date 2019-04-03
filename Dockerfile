@@ -1,4 +1,4 @@
-RG BASE_CONTAINER=jupyter/pyspark-notebook
+ARG BASE_CONTAINER=jupyter/pyspark-notebook
 FROM $BASE_CONTAINER
 
 LABEL maintainer="Tommy Pratama <t@tommy.id>"
