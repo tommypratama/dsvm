@@ -3,6 +3,8 @@ FROM jupyter/all-spark-notebook
 
 LABEL maintainer="Tommy Pratama <t@tommy.id>"
 
+USER root
+
 # Install from requirements.txt file
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt && \
