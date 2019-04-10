@@ -11,6 +11,7 @@ ENV APACHE_SPARK_VERSION 2.4.0
 ENV HADOOP_VERSION 2.7
 
 RUN apt-get -y update && \
+    apt-get install -y --no-install-recommends apt-utils && \
     apt-get install --no-install-recommends -y openjdk-8-jre-headless ca-certificates-java && \
     rm -rf /var/lib/apt/lists/*
 
